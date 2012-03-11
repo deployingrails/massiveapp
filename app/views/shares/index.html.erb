@@ -1,0 +1,26 @@
+<h1>Shares</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Bookmark</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @shares.each do |share| %>
+      <tr>
+        <td><%= share.id %></td>
+        <td><%= link_to share.bookmark_id, share_path(share) %></td>
+        <td><%= share.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_share_path(share), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', share_path(share), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_share_path, :class => 'btn btn-primary' %>

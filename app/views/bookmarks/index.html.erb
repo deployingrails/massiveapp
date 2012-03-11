@@ -1,0 +1,26 @@
+<h1>Bookmarks</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>User</th>
+      <th>Created at</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @bookmarks.each do |bookmark| %>
+      <tr>
+        <td><%= bookmark.id %></td>
+        <td><%= link_to bookmark.user_id, bookmark_path(bookmark) %></td>
+        <td><%= bookmark.created_at %></td>
+        <td>
+          <%= link_to 'Edit', edit_bookmark_path(bookmark), :class => 'btn btn-mini' %>
+          <%= link_to 'Destroy', bookmark_path(bookmark), :method => :delete, :confirm => 'Are you sure?', :class => 'btn btn-mini btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'New', new_bookmark_path, :class => 'btn btn-primary' %>

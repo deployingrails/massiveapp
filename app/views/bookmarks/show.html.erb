@@ -1,0 +1,22 @@
+<h1>Bookmark</h1>
+
+<p>
+  <b>User</b><br>
+  <%= @bookmark.user_id %>
+</p>
+
+<p>
+  <b>Url</b><br>
+  <%= @bookmark.url %>
+</p>
+
+<p>
+  <b>Description</b><br>
+  <%= @bookmark.description %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', bookmarks_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_bookmark_path(@bookmark), :class => 'btn' %>
+  <%= link_to 'Delete', bookmark_path(@bookmark), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>

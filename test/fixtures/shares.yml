@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  bookmark: 
+  shared_by: 
+  shared_with: 
+
+two:
+  bookmark: 
+  shared_by: 
+  shared_with: 

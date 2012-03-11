@@ -1,0 +1,31 @@
+<%= form_for @share, :html => { :class => 'form-horizontal' } do |f| %>
+  <fieldset>
+    <legend><%= controller.action_name.capitalize %> Share</legend>
+
+    <div class="control-group">
+      <%= f.label :bookmark_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :bookmark_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :shared_by_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :shared_by_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <%= f.label :shared_with_id, :class => 'control-label' %>
+      <div class="controls">
+        <%= f.number_field :shared_with_id, :class => 'number_field' %>
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to 'Cancel', shares_path, :class => 'btn' %>
+    </div>
+  </fieldset>
+<% end %>

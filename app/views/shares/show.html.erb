@@ -1,0 +1,22 @@
+<h1>Share</h1>
+
+<p>
+  <b>Bookmark</b><br>
+  <%= @share.bookmark_id %>
+</p>
+
+<p>
+  <b>Shared by</b><br>
+  <%= @share.shared_by_id %>
+</p>
+
+<p>
+  <b>Shared with</b><br>
+  <%= @share.shared_with_id %>
+</p>
+
+<div class="form-actions">
+  <%= link_to 'Back', shares_path, :class => 'btn'  %>
+  <%= link_to 'Edit', edit_share_path(@share), :class => 'btn' %>
+  <%= link_to 'Delete', share_path(@share), :method => 'delete', :confirm => 'Are you sure?', :class => 'btn btn-danger' %>
+</div>
