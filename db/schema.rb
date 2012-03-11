@@ -11,7 +11,15 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120311175130) do
+ActiveRecord::Schema.define(:version => 20120311232832) do
+
+  create_table "accounts", :force => true do |t|
+    t.string   "name"
+    t.string   "login"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "bookmarks", :force => true do |t|
     t.integer  "user_id"
@@ -34,13 +42,5 @@ ActiveRecord::Schema.define(:version => 20120311175130) do
   add_index "shares", ["bookmark_id"], :name => "index_shares_on_bookmark_id"
   add_index "shares", ["shared_by_id"], :name => "index_shares_on_shared_by_id"
   add_index "shares", ["shared_with_id"], :name => "index_shares_on_shared_with_id"
-
-  create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "login"
-    t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
 end
