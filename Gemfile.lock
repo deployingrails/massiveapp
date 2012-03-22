@@ -141,7 +141,7 @@ PLATFORMS
 
 DEPENDENCIES
   cap_gun
-  capistrano
+  capistrano (~> 2.11.2)
   coffee-rails (~> 3.2.1)
   gmetric
   jquery-rails

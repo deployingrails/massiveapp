@@ -15,5 +15,5 @@ end
 
 group :development do
   gem 'cap_gun'
-  gem 'capistrano'
+  gem 'capistrano', '~> 2.11.2'
 end
