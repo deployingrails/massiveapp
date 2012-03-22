@@ -7,7 +7,7 @@ require "whenever/capistrano"
 set :scm, :git
 set :repository, "git://github.com/deployingrails/massiveapp.git"
 
-server "localhost", :app, :db, :primary => true
+server "localhost", :web, :app, :db, :primary => true
 
 ssh_options[:port] = 2222
 ssh_options[:keys] = "~/.vagrant.d/insecure_private_key"
