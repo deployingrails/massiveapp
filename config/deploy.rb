@@ -29,7 +29,7 @@ namespace :deploy do
   end
 end
 
-after "deploy:symlink", "deploy:copy_in_database_yml"
+after "deploy:create_symlink", "deploy:copy_in_database_yml"
 
 #require 'yaml' 
 #role(:redis) { YAML.load(File.read("config/servers.yml"))["servers"]["redis"] }
