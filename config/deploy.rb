@@ -5,7 +5,9 @@ set :whenever_command, "bundle exec whenever"
 require "whenever/capistrano"
 
 set :scm, :git
+set :branch, "with_unicorn"
 set :repository, "git://github.com/deployingrails/massiveapp.git"
+set :bundle_cmd, "/usr/local/bin/bundle"
 
 server "localhost", :web, :app, :db, :primary => true
 
@@ -19,15 +21,6 @@ set :use_sudo, false
 
 set :deploy_via, :copy
 set :copy_strategy, :export
-
-namespace :deploy do
-  task :start do ; end
-  task :stop do ; end
-  desc "Restart the application"
-  task :restart, :roles => :app, :except => { :no_release => true } do
-    run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}"
-  end
-end
 
 after "deploy:create_symlink", "deploy:copy_in_database_yml"
 
