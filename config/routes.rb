@@ -3,7 +3,7 @@ Massiveapp::Application.routes.draw do
 
   resources :bookmarks
 
-  resources :users
+  resources :accounts
 
   root :to => 'bookmarks#index'
 
