@@ -82,6 +82,9 @@ GEM
     net-ssh (2.3.0)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
+    paper_trail (2.6.3)
+      activerecord (~> 3.0)
+      railties (~> 3.0)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -146,6 +149,7 @@ DEPENDENCIES
   gmetric
   jquery-rails
   mysql2
+  paper_trail
   rails (= 3.2.2)
   sass-rails (~> 3.2.3)
   twitter-bootstrap-rails
