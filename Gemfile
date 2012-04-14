@@ -15,6 +15,5 @@ group :assets do
 end
 
 group :development do
-  gem 'cap_gun'
   gem 'capistrano', '~> 2.11.2'
 end

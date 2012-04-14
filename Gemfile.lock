@@ -30,9 +30,6 @@ GEM
       multi_json (~> 1.0)
     arel (3.0.2)
     builder (3.0.0)
-    cap_gun (0.2.4)
-      actionmailer
-      activesupport
     capistrano (2.11.2)
       highline
       net-scp (>= 1.0.0)
@@ -143,7 +140,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  cap_gun
   capistrano (~> 2.11.2)
   coffee-rails (~> 3.2.1)
   gmetric
