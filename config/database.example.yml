@@ -1,0 +1,11 @@
+development:
+  adapter: mysql2
+  database: massiveapp_development
+  username: root
+  password: root
+
+test:
+  adapter: mysql2
+  database: massiveapp_test
+  username: root
+  password: root
